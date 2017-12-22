@@ -1,0 +1,30 @@
+---
+title: nafen
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<!-- begin content -->
+<div class="content">
+	<div class="content__center hero">
+		<h1 class="h1">{{title | title}}</h1>
+			<div class="hero__view">Смотреть видео</div>
+			<div class="hero__play-icon js-play">{{mixins.icon('play')}}</div>
+	</div>
+	
+	<div class="content__video video">
+			<div class="video__video">
+				<video src="../video/nafen.mp4" muted></video>
+			</div>
+			<div class="video__block-overlay-left"></div>
+			<div class="video__block-overlay-right"></div>
+			<div class="video__overlay"></div>
+			<div class="video__cross cross js-cross">
+				<span class="cross__item js-cross1"></span>
+				<span class="cross__item js-cross2"></span>
+			</div>
+	</div>
+</div>
+<!-- end content -->
+
+{% endblock %}
