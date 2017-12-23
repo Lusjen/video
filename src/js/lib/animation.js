@@ -2,7 +2,7 @@ import $ from 'jquery';
 import { TimelineMax } from 'gsap';
 
 $('.js-play').on('click', function() {
-  $('.video video')[0].play();
+  $('video')[0].play();
   $('.js-play').unbind('mouseout');
   $('.js-play').unbind('mouseover');
   var tl = new TimelineMax;
