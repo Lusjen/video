@@ -15,17 +15,28 @@
     <div class="out">
       <!-- begin content -->
       <div class="content">
-        <div class="content__center hero">
-          <h1 class="h1">Nafen</h1>
-          <div class="hero__view">Смотреть видео</div>
-          <div class="hero__play-icon js-play"> <svg class="icon icon-play"><use xlink:href="img/sprite.svg#icon-play"></use></svg> </div>
+        <div class="content__center hero js-hero">
+          <div class="hero__logo">
+            <h1 class="h1">Nafen</h1>
+          </div>
+          <div class="hero__view view">Смотреть видео</div>
+          <div class="hero__icon"> <svg class="icon icon-play"><use xlink:href="img/sprite.svg#icon-play"></use></svg>
+            <div class="hero__icon-click"></div>
+          </div>
         </div>
         <div class="content__video video">
           <div class="video__video"> <video src="video/nafen.mp4" muted></video> </div>
           <div class="video__block-overlay-left"></div>
           <div class="video__block-overlay-right"></div>
           <div class="video__overlay"></div>
-          <div class="video__cross cross js-cross"> <span class="cross__item js-cross1"></span> <span class="cross__item js-cross2"></span> </div>
+          <div class="video__cross cross js-cross"> <span class="cross__item-top js-cross-top"></span> <span class="cross__item-bottom js-cross-bottom"></span> </div>
+          <div class="video__pause-play"> <svg class="icon icon-pause-play"><use xlink:href="img/sprite.svg#icon-pause-play"></use></svg> </div>
+          <div class="video__controls">
+            <div class="video__currentTime"></div>
+            <div class="video__pause"> Пауза </div>
+            <div class="video__duration"></div>
+            <div class="video__progressBar"> <span></span> </div>
+          </div>
         </div>
       </div>
       <!-- end content -->

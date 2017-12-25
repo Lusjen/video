@@ -6,12 +6,14 @@ title: nafen
 {% block content %}
 <!-- begin content -->
 <div class="content">
-	<div class="content__center hero">
-		<h1 class="h1">{{title | title}}</h1>
-			<div class="hero__view">Смотреть видео</div>
-			<div class="hero__play-icon js-play">{{mixins.icon('play')}}</div>
-	</div>
-	
+	<div class="content__center hero js-hero">
+		<div class="hero__logo"><h1 class="h1">{{title | title}}</h1></div>
+		<div class="hero__view view">Смотреть видео</div>
+		<div class="hero__icon">
+			{{mixins.icon('play')}}
+			<div class="hero__icon-click"></div>
+		</div>
+	</div>	
 	<div class="content__video video">
 			<div class="video__video">
 				<video src="video/nafen.mp4" muted></video>
@@ -20,11 +22,21 @@ title: nafen
 			<div class="video__block-overlay-right"></div>
 			<div class="video__overlay"></div>
 			<div class="video__cross cross js-cross">
-				<span class="cross__item js-cross1"></span>
-				<span class="cross__item js-cross2"></span>
+				<span class="cross__item-top js-cross-top"></span>
+				<span class="cross__item-bottom js-cross-bottom"></span>
+			</div>
+			<div class="video__pause-play">{{mixins.icon('pause-play')}}</div>
+			<div class="video__controls">
+				<div class="video__currentTime"></div>
+				<div class="video__pause">
+					Пауза
+				</div>
+    			<div class="video__duration"></div>
+				<div class="video__progressBar">
+					<span></span>
+				</div>
 			</div>
 	</div>
 </div>
 <!-- end content -->
-
 {% endblock %}
